@@ -1,12 +1,10 @@
 #include <stdio.h>
-include "main.h"
-
+#include "main.h"
 /**
 *more_numbers - prints numbers to 14
 *
 *Return: returns nothing
 */
-
 void more_numbers(void)
 {
 	int n1, n2;
@@ -20,6 +18,7 @@ void more_numbers(void)
 				putchar((n2 / 10) + '0');
 			}
 			putchar((n2 % 10) + '0');
-		}putchar(10);
+		}
+		putchar(10);
 	}
 }
