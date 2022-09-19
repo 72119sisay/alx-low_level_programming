@@ -7,6 +7,7 @@
  * @str: this is my input string
  * 
  */
+
 void _puts(char *str)
 {
 	int index;
