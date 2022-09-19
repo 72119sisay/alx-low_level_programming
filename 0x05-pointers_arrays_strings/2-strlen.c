@@ -5,7 +5,7 @@
  *
  * @s: string input
  *
- * Return: String lenngth 
+ * Return: String lenngth
  */
 int _strlen(char *s)
 {
