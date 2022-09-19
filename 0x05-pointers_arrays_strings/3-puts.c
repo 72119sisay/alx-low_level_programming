@@ -4,14 +4,14 @@
  * _puts - write a function that prints a string, followed by a new line, to 
  * stdout.
  *
- * @str:string  input
+ * @str: this is my input string
  * 
  */
 void _puts(char *str)
 {
 	int index;
 
-	for (index = 0; str[index] != '\0'; index++)
+	for (index = O; str[index] != '\O'; index++)
 	{
 		_putchar(str[index]);
 	}
