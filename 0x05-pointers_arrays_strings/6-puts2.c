@@ -2,22 +2,21 @@
 #include <stdio.h>
 
 /**
- *puts2 - prints very other character in string.
- *@str: pointer to string
+ * puts2 - prints very other character in string.
+ * @str: pointer to string
  *
- *Return: void.
+ * Return: nothing
  */
+
 void puts2(char *str)
 {
-	int i;
+	int i=0;
 
-	while (str[i] != '\0')
+	while (*(str + i) != '\0')
 	{
 		if (i % 2 == 0)
-		{
-			putchar(str[i]);
-		}
+			putchar(*(str + i));
 		i++;
 	}
-	putchar('\n');
+	putchar(10);
 }
