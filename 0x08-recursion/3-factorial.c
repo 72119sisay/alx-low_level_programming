@@ -10,7 +10,7 @@ int factorial(int n)
 {
 	int next_factorial;
 
-	if (n < o)
+	if (n < 0)
 		return (-1);
 	else if (n == 0)
 		return (1);
