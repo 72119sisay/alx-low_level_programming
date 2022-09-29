@@ -26,17 +26,17 @@ return (-1);
  * *_sqrt_recursion - evaluate sqrt
  * *@n: interger
  *  *Return: sqrt_recursion
- *  */
+ */
 
 int _sqrt_recursion(int n)
 {
 	int i = 0;
 
-	if (i < 0) /*If n is negative*/
+	if (i < 0)
 		return (-1);
 
 	else
 	{
-		return (_evaluate(i, n)); /*Recursion call*/
+		return (_evaluate(i, n));
 	}
 }
