@@ -17,7 +17,7 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-	}:
+	};
 	int i;
 
 	i = 0;
@@ -30,4 +30,4 @@ int (*get_op_func(char *s))(int, int)
 	}
 
 	return (NULL);
-}
+i}
