@@ -1,37 +1,39 @@
 #include "main.h"
-/**
- * cap_string - capitalizes the words of a string
- * @s: string
- * Return: s
- */
-char *cap_string(char *s)
-{
-	int x, y;
-	int trigger;
-	char nots[] = ",;.!?(){}\nt\" ";
 
-	for (x = 0, trigger = 0; s[x] != '\0'; x++)
+/**
+ * cap_string - capitalize all words of a string
+ * @str: string
+ * Return: `str`
+ */
+
+char *cap_string(char *str)
+{
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\" ";
+
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		if (s[0] > 96 && s[0] < 123)
-			trigger =1;
-		for (y = 0; nots[y] != '\0'; y++)
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			if (nots[y] == s[x])
+			if (nots[c] == str[i])
 				trigger = 1;
 		}
+
 		if (trigger)
 		{
-			if (s[x] > 96 && s[x] < 123)
+			if (str[i] > 96 && str[i] < 123)
 			{
-				s[x] -= 32;
+				str[i] -= 32;
 				trigger = 0;
 			}
-			else if (s[x] > 64 && s[x] < 91)
+			else if (str[i] > 64 && str[i] < 91)
 				trigger = 0;
-			else if (s[x] > 47 && s[x] < 58)
+			else if (str[i] > 47 && str[i] < 58)
 				trigger = 0;
 		}
 	}
-	return (s);
+	return (str);
 }
-
