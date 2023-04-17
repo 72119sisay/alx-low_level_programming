@@ -4,18 +4,18 @@ int binary_search_recursion(int *array, int value,
 			    size_t low, size_t high);
 
 /**
- * binary_search_recursion - helper to advanced_binary , recursively searches
+ * binary_search_recursion - helper to `advanced_binary`, recursively searches
  * for a value in an integer array
- * @array: pointer to first element of array to search
+ * @array: pointer to first element of array to seach
  * @value: value to search for
  * @low: starting index in array
  * @high: ending index in array
  *
- * Return: index containing 'value', or -1 if 'value' not found or
- * 'array' is NULL
+ * Return: index containing `value`, or -1 if `value` not found or
+ * `array` is NULL
  */
 int binary_search_recursion(int *array, int value,
-			   size_t low, size_t high)
+			    size_t low, size_t high)
 {
 	size_t mid, i;
 
@@ -44,15 +44,15 @@ int binary_search_recursion(int *array, int value,
 }
 
 /**
- * advanced_binary - searches for a value in a sorted array of integrs
- * using a binary search algorith. unlike 'binary_search', consistently
- * returns first appearance of 'value' in array
+ * advanced_binary - searches for a value in a sorted array of integers
+ * using a binary search algorithm. Unlike `binary_search`, consistently
+ * returns first appearance of `value` in array
  * @array: pointer to first element of array to search
  * @size: number of elements in array
  * @value: value to search for
  *
- * Return: first index containing 'value', or -1 if 'value' not found or
- * 'array' is NULL
+ * Return: first index containing `value`, or -1 if `value` not found or
+ * `array` is NULL
  */
 
 int advanced_binary(int *array, size_t size, int value)
@@ -60,7 +60,7 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t low = 0;
 	size_t high = size - 1;
 
-	if (array)
+	if (!array)
 		return (-1);
 
 	return (binary_search_recursion(array, value, low, high));
