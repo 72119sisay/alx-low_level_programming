@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 int binary_search_helper(int *array, int value,
-			size_t low, size_t high);
+			 size_t low, size_t high);
 size_t min(size_t a, size_t b);
 
 /**
@@ -30,7 +30,7 @@ size_t min(size_t a, size_t b)
  */
 
 int binary_search_helper(int *array, int value,
-			size_t low, size_t high)
+			 size_t low, size_t high)
 {
 	size_t mid, i;
 
@@ -82,6 +82,6 @@ int exponential_search(int *array, size_t size, int value)
 	low = bound / 2;
 	high = min(bound, size - 1);
 	/* 'found' message generated even if array[high] < value */
-	printf("value found between indexes [%lu] and [%lu]\n", low, high);
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
 	return (binary_search_helper(array, value, low, high));
 }
